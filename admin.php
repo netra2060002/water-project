@@ -1,5 +1,5 @@
 <?php
-//
+
 $host="localhost";
 $user="root";
 $password="";
@@ -35,8 +35,8 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 	{	
 
 		$_SESSION["username"]=$username;
-
-		header("location:userhome.php");
+        echo "USER";
+		header("location:user.php");
 	}
 
 	elseif($row["usertype"]=="admin")
@@ -44,7 +44,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 
 		$_SESSION["username"]=$username;
 		
-		header("location:Admindashboard.php");
+		header("location:index.html");
 	}
 
 	else
@@ -91,7 +91,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST")
 					<button>login</button>
 	
                     </div>	
-                    <p class="message">Not registered? <a href="water.html">Create an account</a></p>
+                    <p class="message">Not registered? <a href="water signup.html">Create an account</a></p>
                 </form>
             </div>
         </div>
